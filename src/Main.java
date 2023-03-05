@@ -1,19 +1,26 @@
 public class Main {
+
+    public static void checkYear(int year) {
+        if(year % 4 == 0 && year % 100 !=0 || year % 400 == 0 ) {
+            System.out.println(year + " год является высокосным");
+        } else {
+            System.out.println(year + " год не является высокосным");
+        }
+
+    }
+
     public static void main(String[] args) {
         task1();
         task2();
         task3();
-        task4();
-        task5();
-        task6();
-        task7();
-        task8();
+
 
     }
     public static void task1() {
         System.out.println("Задача 1");
         // Пишем код для задачи 1
-
+        int year = 2000;
+        checkYear(year);
     }
 
     public static void task2() {
@@ -28,33 +35,6 @@ public class Main {
 
     }
 
-    public static void task4() {
-        System.out.println("Задача 4");
-        // Пишем код для задачи 4
 
-    }
-
-    public static void task5 () {
-        System.out.println("Задача 5");
-        // Пишем код для задачи 5
-
-    }
-
-    public static void task6() {
-        System.out.println("Задача 6");
-        // Пишем код для задачи 6
-
-    }
-
-    public static void task7() {
-        System.out.println("Задача 7");
-        // Пишем код для задачи 7
-
-    }
-    public static void task8 () {
-        System.out.println("Задача 8");
-        // Пишем код для задачи 8
-
-    }
 
 }
