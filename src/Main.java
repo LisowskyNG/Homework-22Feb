@@ -28,10 +28,28 @@ public class Main {
         else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-
-
     }
 
+    public static int calcDeliveryTerm (int deliveryDistance){
+        int deliveryDays = 0;
+        if (deliveryDistance <= 0) {
+            System.out.println("Введите корректное значение расстояния");
+        }
+        if (deliveryDistance > 0 && deliveryDistance < 20) {
+            deliveryDays = 1;
+        }
+        if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            deliveryDays = 2;
+        }
+        if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+            deliveryDays = 3;
+        }
+        if (deliveryDistance >= 100) {
+            System.out.println("Свыше 100 км доставки нет");
+        }
+        return deliveryDays;
+
+    }
 
 
     public static void main(String[] args) {
@@ -61,6 +79,9 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         // Пишем код для задачи 3
+        int deliveryDistance = 10;
+        int days = calcDeliveryTerm(deliveryDistance);
+        System.out.println("Срок доставки составит, " +days+ " д.");
 
     }
 
